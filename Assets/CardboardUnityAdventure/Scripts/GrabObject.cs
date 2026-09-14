@@ -27,6 +27,11 @@ public class GrabObject : MonoBehaviour
     }
 
     public void Grab()
+    //-----------------------------------------------------------------------//
+    //NOTA: La capsula para el GrabObject, la que se interactua, debe tener un BoxCollider y un Audio Source con sonidos
+    // La capsula con el script GrabObject, el Spawn Cylinder en un Empy, son hijos de un Empy llamado Objetos Agarrables
+    //El script GrabManager esta en un Empy
+    //-----------------------------------------------------------------------//
     {
         player.PlayOneShot(soundGrab);
         if (grabManager.heldItem != null)

@@ -5,18 +5,23 @@ using UnityEngine;
 public class GrabManager : MonoBehaviour
 {
     public GameObject[] interactables;
-    public List<GameObject> potions;
+    public List<GameObject> objetosA; // se cambio el nombre por objetosA
     public List<GameObject> products;
 
     public GameObject heldItem;
     void Start()
+    //-----------------------------------------------------------------------//
+    //NOTA: La capsula para el GrabObject, la que se interactua, debe tener un BoxCollider y un Audio Source con sonidos
+    // La capsula con el script GrabObject, el Spawn Cylinder en un Empy, son hijos de un Empy llamado Objetos Agarrables
+    //El script GrabManager esta en un Empy
+    //-----------------------------------------------------------------------//
     {
         interactables = GameObject.FindGameObjectsWithTag("Interactable");
         foreach (GameObject item in interactables)
         {
             if (item.GetComponent<GrabObject>())
             {
-                potions.Add(item);
+                objetosA.Add(item);
                 if (!item.GetComponent<GrabObject>().type.Equals("Objeto"))
                 {
                     products.Add(item);

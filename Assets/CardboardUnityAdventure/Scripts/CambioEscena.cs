@@ -8,5 +8,7 @@ public class CambioEscena : MonoBehaviour
     public void CambioEscene (int numeroEscena)
     {
         SceneManager.LoadScene(numeroEscena); // lo principal para cambiar la escena
+        // en onClick del boton, se asigna la escena por numeros --> revisar las escenas en Build Profiles
     }
 }
+// ESTE SCRIPT SE PUEDE REUTILIZAR
