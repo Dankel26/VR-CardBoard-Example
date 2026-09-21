@@ -37,7 +37,8 @@ public class GrabManager : MonoBehaviour
         {
             GameObject pointer = GameObject.Find("GazePointer");
             Vector3 pointerPos = pointer.transform.position;
-            heldItem.transform.position = new Vector3(pointerPos.x, pointerPos.y + 0.5f, pointerPos.z);
+             // si en el caso se genera un error al agarrar un objeto, tenemos que sumar la posPointer en Y
+            heldItem.transform.position = new Vector3(pointerPos.x, pointerPos.y + 1f, pointerPos.z);
         }
     }
 }
